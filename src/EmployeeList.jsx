@@ -25,12 +25,20 @@ const EmployeeList = ({employeeList, removeEmployee, employees, setEmployees}) =
 
 	const setDisplayParams = (params) => {
 		const filter = params.filter.toLowerCase();
+		const filterBy = params.filterBy;
 		const newDisplayData = employees.filter((el) => {
-			return (
-				el.firstName.toLowerCase().includes(filter) ||
-				el.lastName.toLowerCase().includes(filter) ||
-				el.position.toLowerCase().includes(filter)
-			);
+			switch (filterBy) {
+				case 0:
+					return el.id.toString().includes(filter)
+				case 1:
+					return el.firstName.toLowerCase().includes(filter)
+				case 2:
+					return el.lastName.toLowerCase().includes(filter)
+				case 3:
+					return el.position.toLowerCase().includes(filter)
+				default:
+					alert("Something went wrong.")
+			}
 		});
 
 		newDisplayData.sort(sorters[params.sortMethod][params.sortBy]);

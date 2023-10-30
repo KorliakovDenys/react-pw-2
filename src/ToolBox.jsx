@@ -2,12 +2,14 @@ import {useRef} from "react";
 
 const ToolBox = (props) => {
 	const filter = useRef();
+	const filterBy = useRef();
 	const sortBy = useRef();
 	const sortMethod = useRef();
 
 	const apply = () => {
 		props.setDisplayParams({
 			filter: filter.current.value,
+			filterBy: Number(filterBy.current.value),
 			sortBy: Number(sortBy.current.value),
 			sortMethod: Number(sortMethod.current.value),
 		});
@@ -17,6 +19,12 @@ const ToolBox = (props) => {
 		<div className="tool-box">
 			<span>Filter string: </span>
 			<input ref={filter} placeholder="filter by" />
+			<select ref={filterBy}>
+				<option value="0">Id</option>
+				<option value="1">First name</option>
+				<option value="2">Last name</option>
+				<option value="3">Position</option>
+			</select>
 			<div className="sorting">
 				<span>Sorting options: </span>
 				<select ref={sortBy}>
