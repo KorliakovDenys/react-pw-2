@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa&family=Quicksand&display=swap");
+
+:root {
+	--app-width: 400px;
+}
+
+html {
+	box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+	box-sizing: inherit;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #86a789;
+	font-family: "Quicksand", sans-serif;
+}
+
+.section-heading {
+	text-align: center;
+	font-family: "Comfortaa", sans-serif;
+	margin: 5px 0 10px;
+	font-weight: 700;
+	user-select: none;
+}

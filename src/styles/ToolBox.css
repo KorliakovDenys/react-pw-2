@@ -1,0 +1,4 @@
+.tool-box {
+	display: flex;
+	flex-direction: column;
+}

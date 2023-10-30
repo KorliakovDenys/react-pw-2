@@ -1,0 +1,21 @@
+.employee-list {
+	margin: 15px 0;
+}
+
+.employee-table-row {
+	user-select: none;
+	-moz-user-select: none;
+	display: grid;
+	grid-template-columns: 30px repeat(2, calc(var(--app-width) / 4)) max-content;
+	align-items: center;
+}
+
+.employee-caption {
+	background-color: rgb(226, 232, 240);
+	padding: 5px 0;
+	font-weight: 700;
+}
+
+.employee-caption > :first-child {
+	text-align: center;
+}

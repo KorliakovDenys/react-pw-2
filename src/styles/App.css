@@ -1,0 +1,6 @@
+.app-container {
+	width: var(--app-width);
+	margin: 0 auto;
+	background-color: #b2c8ba;
+	padding: 10px;
+}

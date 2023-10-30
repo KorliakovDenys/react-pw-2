@@ -1,0 +1,15 @@
+.form-header {
+	font-size: 1.2rem;
+}
+
+.new-employee-form {
+	display: flex;
+	flex-direction: column;
+	padding-bottom: 20px;
+	border-bottom: 1px solid gray;
+	margin-bottom: 20px;
+}
+
+.new-employee-form > input {
+	margin: 3px 0;
+}

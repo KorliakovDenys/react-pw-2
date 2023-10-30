@@ -1,0 +1,31 @@
+.employee {
+	position: relative;
+	background-color: aliceblue;
+}
+
+.employee > :first-child {
+	text-align: center;
+}
+
+.employee-remove {
+	position: absolute;
+	right: 3px;
+	visibility: hidden;
+	background-image: url("/close-circle.svg");
+	background-position: center;
+	background-size: contain;
+	width: 20px;
+	height: 20px;
+}
+
+.employee:hover {
+	background-color: rgb(226, 232, 240);
+}
+
+.employee:hover > :last-child {
+	visibility: visible;
+}
+
+.employee-info {
+	padding: 0.8rem 0;
+}
